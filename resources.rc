@@ -1,0 +1,206 @@
+// Microsoft Visual C++ generated resource script.
+//
+#pragma code_page(65001)
+
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_APPICON             ICON                    "appicon.ico"
+
+IDI_SMALL               ICON                    "appicon.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_MAINMENU MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Reset to zero",              IDM_RESET, GRAYED
+        MENUITEM "&Terminal ...",               IDM_TERMINAL, GRAYED
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ...",                  IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_FEISET ACCELERATORS
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 201, 121
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDI_APPICON,IDC_STATIC,14,14,21,20
+    LTEXT           "Adjusts frequency offset for FE-5650A Option CPOM and FE-5680A Option 2 that use binary protocol",IDC_ABT_DESC,42,39,132,24,SS_NOPREFIX
+    DEFPUSHBUTTON   "OK",IDOK,128,100,50,14,WS_GROUP
+    CONTROL         "Webpage link",IDC_LINK,"SysLink",WS_TABSTOP,42,69,150,12
+    LTEXT           "Name",IDC_ABT_NAME,42,16,132,8
+    LTEXT           "Version",IDC_ABT_VER,42,25,132,8
+END
+
+IDD_MAIN DIALOGEX 0, 0, 104, 140
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Apply",IDC_APPLY,6,116,42,14,WS_DISABLED
+    PUSHBUTTON      "Save",IDC_SAVE,54,116,42,14,WS_DISABLED
+    COMBOBOX        IDC_PORT,50,4,46,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Serial port:",IDC_STATIC,9,7,36,8
+    GROUPBOX        "Offset, Hz",IDC_STATIC,6,24,90,25
+    CTEXT           "",IDC_CURRENT,12,35,78,10
+    GROUPBOX        "Offset adjustment",IDC_STATIC,6,54,90,60
+    EDITTEXT        IDC_EDIT,22,80,58,12,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED | NOT WS_BORDER,WS_EX_CLIENTEDGE | WS_EX_RIGHT
+    PUSHBUTTON      "▲",IDC_UP0,64,66,15,14,WS_DISABLED
+    PUSHBUTTON      "▲",IDC_UP3,22,66,15,14,WS_DISABLED
+    PUSHBUTTON      "▲",IDC_UP2,36,66,15,14,WS_DISABLED
+    PUSHBUTTON      "▲",IDC_UP1,50,66,15,14,WS_DISABLED
+    PUSHBUTTON      "▼",IDC_DN0,64,93,15,14,WS_DISABLED
+    PUSHBUTTON      "▼",IDC_DN3,22,93,15,14,WS_DISABLED
+    PUSHBUTTON      "▼",IDC_DN2,36,93,15,14,WS_DISABLED
+    PUSHBUTTON      "▼",IDC_DN1,50,93,15,14,WS_DISABLED
+END
+
+IDD_TERMINAL DIALOGEX 0, 0, 305, 204
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Terminal"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    ICON            32515,IDC_TER_ICON,10,10,20,20
+    LISTBOX         IDC_TER_OUTPUT,12,54,282,98,LBS_NOINTEGRALHEIGHT | LBS_NOSEL | WS_VSCROLL | WS_HSCROLL
+    EDITTEXT        IDC_TER_INPUT,18,169,216,14,ES_UPPERCASE | ES_AUTOHSCROLL | WS_DISABLED
+    DEFPUSHBUTTON   "Send",IDC_TER_SEND,240,169,50,14,WS_DISABLED
+    LTEXT           "Warning! You may and WILL brick your device if you don't know what you are doing! Tick the checkbox to enable the terminal.",IDC_STATIC,42,12,252,23
+    CONTROL         "I want to brick my device",IDC_TER_CONSENT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,36,96,10
+    GROUPBOX        "Terminal input",IDC_TER_GROUP,12,156,282,36,WS_DISABLED
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 194
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 102
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 133
+    END
+
+    IDD_TERMINAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 298
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 197
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
