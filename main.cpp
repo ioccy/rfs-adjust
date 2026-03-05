@@ -8,7 +8,7 @@
 const std::wstring APP_LINK = L"https://github.com/ioccy/vlp-2000";
 
 HINSTANCE hInst;
-DWORD currentOffset;                    // Current defice frequency offset
+DWORD currentOffset;                    // Current device frequency offset
 DeviceConnect* rubidium;                // Serial connect session with device
 HFONT hFontBase, hFontBold, hFontHex;
 
