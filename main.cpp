@@ -5,7 +5,7 @@
 
 #define APP_HEADER  L"RFS Adjust"
 #define APP_VERSION L"v1.0 (" __DATE__ L")"
-const std::wstring APP_LINK = L"https://github.com/ioccy/vlp-2000";
+const std::wstring APP_LINK = L"https://github.com/ioccy/rfs-adjust";
 
 HINSTANCE hInst;
 DWORD currentOffset;                    // Current device frequency offset
@@ -44,7 +44,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance
     wcex.lpszMenuName = MAKEINTRESOURCEW(IDC_MAINMENU);
     wcex.lpszClassName = L"mainClass";
     wcex.hIconSm = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
-    RegisterClassExW(&wcex);
+    RegisterClassEx(&wcex);
 
     HWND hWnd = CreateWindowW(L"mainClass", APP_HEADER,
         WS_OVERLAPPEDWINDOW - WS_MINIMIZEBOX - WS_MAXIMIZEBOX - WS_THICKFRAME,
