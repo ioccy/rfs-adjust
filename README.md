@@ -3,7 +3,7 @@ This app adjusts frequency offset of Frequency Electronics Inc. rubidium standar
 <br><br>
 <img alt="Screenshot 2026-03-06 000130" src="https://github.com/user-attachments/assets/bc2fb589-1d36-46a1-9454-b789076b09df" />
 <br><br><br>
-For those brave enough and curious a simple terminal app is available.
+For those curious and brave enough a simple terminal app is available. It handles binary protocol and translates it to readable hex codes – just enter command code and data if any.
 <br><br>
 <img alt="Screenshot 2026-03-06 000223" src="https://github.com/user-attachments/assets/fa766f3b-5b68-4c6c-81c7-f3be01724f00" />
 
