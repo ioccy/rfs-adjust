@@ -1,3 +1,5 @@
+# !!! This project is now obsolete. It will not receive any updates.<br>See [fe-tools](https://ioccy.github.io/fe-tools) more much more feature-reach and user friendly cross-platform app.
+
 <h1>RFS Adjust</h1>
 This app adjusts frequency offset of Frequency Electronics Inc. rubidium standards <b>FE-5650A&nbsp;option&nbsp;CPOM</b> and <b>FE-5680A&nbsp;Option&nbsp;2</b> that share the same binary protocol. Protocol information taken from the datasheets below.
 <br><br>
